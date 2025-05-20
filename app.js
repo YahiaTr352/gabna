@@ -21,6 +21,7 @@ app.use(cors({
   origin: "http://localhost:3000",
   credentials: true
 }));
+app.set('trust proxy', 1); // أو true
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
